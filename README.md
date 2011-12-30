@@ -9,6 +9,7 @@ class PlanSku < ActiveRecord::Base
 	build_associated :sku
 	build_associated :plan_cost
 	build_associated :plan_coverage
-end```
+end
+```
 
 Tested on Rails3.1.  Use at own risk.
