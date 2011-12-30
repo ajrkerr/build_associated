@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = BuildAssociated::VERSION
   s.authors     = ["Adam Kerr"]
   s.email       = ["ajrkerr@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://github.com/ajrkerr/build_associated"
+  s.summary     = %q{Have ActiveRecord automagically build an association when accessed. Useful for belongs_to associations which should never be nil.}
+  s.description = %q{Have ActiveRecord automagically build an association when accessed. Useful for belongs_to associations which should never be nil.}
 
   s.rubyforge_project = "build_associated"
 
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "activerecord"
 end
