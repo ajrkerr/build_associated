@@ -9,7 +9,9 @@ module BuildAssociated
       remove_method association_name
 
       define_method association_name do
-        self.send("_#{association_name}") || self.send("build_#{association_name}")
+        obj = self.send("_#{association_name}") 
+        obj ||= self.send("build_#{association_name}") unless self.frozen? or self.readonly?
+        return obj
       end
     end
   end
