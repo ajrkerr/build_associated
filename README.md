@@ -10,6 +10,9 @@ class PlanSku < ActiveRecord::Base
 	build_associated :plan_cost
 	build_associated :plan_coverage
 end
+
+plan = PlanSku.new
+plan.sku # Instead of nil, it now returns PlanSku.build_sku
 ```
 
 Tested on Rails3.1.  Use at own risk.
